@@ -1,0 +1,221 @@
+///
+/// Phantom by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Header */
+.meny {
+	@include vendor('display', 'flex');
+	@include vendor('justify-content', 'flex-end');
+	@include vendor('align-items', 'center');
+	width: 100%;
+	height: inherit;
+}
+
+.navbar {
+	@include vendor('display', 'flex');
+	@include vendor('justify-content', 'space-between');
+	position: relative;
+	height: inherit;
+	width: inherit;
+}
+
+#header {
+	&.no-padding-side {
+		padding: 10px 0px 10px 0px !important;
+	}
+
+	.logo {
+		&.no-margin-side {
+			margin: 17px 0 !important;
+		}
+	}
+}
+
+@media screen and (max-width: 990px) {
+  .meny {
+		position: absolute;
+		left: +10000%;
+    display: none;
+  }
+  .meny-responsive {
+    list-style: none;
+    position: fixed;
+    right: 0px;
+    top: 10%;
+    background-color: transparentize(_palette(bg), 0.5);
+        a {
+
+          display: block;
+          position: relative;
+          height: 4em;
+          line-height: 3em;
+          padding: 0 1.5em;
+          background-color: transparentize(_palette(bg), 0.5);
+          border-radius: _size(border-radius);
+          border: 0;
+          font-size: 0.8em;
+          font-weight: _font(weight-bold);
+          letter-spacing: _font(letter-spacing);
+          text-transform: uppercase;
+        }
+  }
+  .meny-responsive a.icon {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.nav-button {
+  display: none;
+}
+
+@media screen and (max-width: 990px) {
+  .nav-button {
+    display: block;
+	position: fixed;
+	right: 2em;
+    top: 33px;
+    z-index: 10000;
+  }
+}
+	#header {
+		padding: 10px 20px;
+		background: #fff;
+		border-bottom: 2px solid #eee;
+		position: fixed;
+		z-index: 3;
+		width: 100%;
+
+		.logo {
+			@include vendor('display', 'flex');
+
+			border-bottom: 0;
+			color: inherit;
+			font-weight: _font(weight-bold);
+			letter-spacing: _font(letter-spacing);
+			margin: 17px;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			> * {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.symbol {
+				margin-right: 0.65em;
+
+				img {
+					display: block;
+					width: 2em;
+					height: 2em;
+				}
+			}
+
+			.title {
+				@include vendor('display', 'flex');
+				align-self: center;
+			}
+		}
+		nav {
+			ul {
+        display: flex;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					padding: 0;
+
+					a {
+						display: block;
+						position: relative;
+						height: 3.4em;
+						line-height: 3em;
+						padding: 0 1.5em;
+						background-color: transparentize(_palette(bg), 0.5);
+						border-radius: _size(border-radius);
+						border: 0;
+						font-size: 0.8em;
+						font-weight: _font(weight-bold);
+						letter-spacing: _font(letter-spacing);
+						text-transform: uppercase;
+					}
+
+					a[href="#menu"] {
+						-webkit-tap-highlight-color: transparent;
+						width: 4em;
+						text-indent: 4em;
+						font-size: 1em;
+						overflow: hidden;
+						padding: 0;
+						white-space: nowrap;
+
+						&:before, &:after {
+							@include vendor('transition', 'opacity #{_duration(transition)} ease');
+							content: '';
+							display: block;
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							background-position: center;
+							background-repeat: no-repeat;
+							background-size: 2em 2em;
+						}
+
+						&:before {
+							background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><style>line { stroke-width: 8px; stroke: #{_palette(accent1)}; }</style><line x1="0" y1="25" x2="100" y2="25" /><line x1="0" y1="50" x2="100" y2="50" /><line x1="0" y1="75" x2="100" y2="75" /></svg>');
+							opacity: 0;
+						}
+
+						&:after {
+							background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><style>line { stroke-width: 8px; stroke: #{_palette(fg)}; }</style><line x1="0" y1="25" x2="100" y2="25" /><line x1="0" y1="50" x2="100" y2="50" /><line x1="0" y1="75" x2="100" y2="75" /></svg>');
+							opacity: 1;
+						}
+
+						&:hover {
+							&:before {
+								opacity: 1;
+							}
+
+							&:after {
+								opacity: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+  @media screen and (max-width: 990px) {
+    #header{
+      position: absolute;
+      background-color: white;
+      nav{
+        ul{
+          display: block;
+        }
+      }
+    }
+	}
+	
+	@media screen and (min-width: 1410px) {
+		.header {
+			&-inner {
+				padding: 0 80px;
+				position: relative;
+			}
+		}
+	}
+
+	@include breakpoint('<=small') {
+		#header {
+			.logo {
+				margin: 17px 0;
+			}
+		}
+	}

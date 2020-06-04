@@ -1,0 +1,61 @@
+/* Profile */
+    .profile {
+        &-section {
+            @include vendor('display', 'flex');
+            @include vendor('flex-wrap', 'wrap');
+
+            > div {
+                @include vendor('flex', '50%');
+                margin: 0 0 2em 0;
+
+                &:first-child {
+                    @include vendor('flex', '100%');
+                    margin: 0;
+                }
+
+                &:last-child {
+                    @include vendor('flex-grow', '0');
+                }
+            }
+
+            .row {
+                width: auto;
+
+                > .col-6 {
+                    width: 63%;
+                }
+            }
+
+            .button {
+                &.small {
+                    margin-top: 20px;
+                }
+            }
+
+            .user {
+                &-info {
+                    padding: 0 0 2em 0;
+                }
+            }
+        }
+    }
+
+/* Breakpoints */
+    @include breakpoint('<=medium') {
+        .profile {
+            &-section {
+                @include vendor('display', 'flex');
+                @include vendor('flex-wrap', 'wrap');
+    
+                > div {
+                    @include vendor('flex', '100%');
+                }
+
+                .row {
+                    > .col-6 {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }

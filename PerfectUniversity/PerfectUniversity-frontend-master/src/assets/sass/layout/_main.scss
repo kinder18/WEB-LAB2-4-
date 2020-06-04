@@ -1,0 +1,139 @@
+///
+/// Phantom by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Main */
+
+	#main {
+		@include padding(5em, 0, (-5em, 0, 3em, 0));
+		padding-top: 112px;
+	}
+
+	.clearfix {
+		clear: both;
+		content: " ";
+	}
+
+	.col-xs-4, .col-xs-6, .col-xs-8, .col-sm-4,
+	.col-sm-8, .col-sm-push-4, .col-sm-pull-8 {
+        float: left;
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .col-xs {
+        &-8 {
+            width: 66.66667%;
+        }
+
+        &-6 {
+            width: 50%;
+        }
+
+        &-4 {
+            width: 33.33333%;
+        }
+	}
+
+	.col-sm {
+		&-push-4 {
+			left: 33.33333%;
+		}
+
+		&-pull-8 {
+			right: 66.66667%;
+		}
+
+		&-8 {
+			width: 66.66667%;
+		}
+
+		&-4 {
+			width: 33.33333%;
+		}
+	}
+
+	.no-radius-btm {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.no-radius-top {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+/* Breakpoints */
+	@include breakpoint('<=medium') {
+        .col-xs {
+			&-6 {
+				width: 100%;
+			}
+
+			&-4 {
+				width: 27%;
+			}
+		}
+
+		.col-sm {
+			&-push-4 {
+				left: 38%;
+			}
+	
+			&-pull-8 {
+				right: 62%;
+			}
+	
+			&-8 {
+				width: 62%;
+			}
+	
+			&-4 {
+				width: 38%;
+			}
+		}
+    }
+
+    @include breakpoint('<=small') {
+        .col {
+			&-xs-4 {
+				width: 33.33333%;
+			}
+		} 
+
+		.col-sm {
+			&-push-4 {
+				float: unset;
+				left: unset;
+			}
+	
+			&-pull-8 {
+				right: -15%;
+			}
+	
+			&-8 {
+				width: 100%;
+			}
+	
+			&-4 {
+				width: 70%;
+			}
+		}
+	}
+	
+	@include breakpoint('<=xsmall') {
+		.col-sm {
+			&-pull-8 {
+				float: unset;
+				right: unset;
+			}
+	
+			&-4 {
+				width: 100%;
+			}
+		}
+	}

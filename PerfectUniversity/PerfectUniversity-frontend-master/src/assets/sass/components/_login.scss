@@ -1,0 +1,27 @@
+/* Login */
+    .login-form {
+        .row {
+            @include vendor('flex-direction', 'column');
+            
+            > .col-6 {
+                width: 60%;
+            }
+
+            .forgot-password {
+                padding-top: 0.4em;
+            }
+        }
+    }
+
+/* Breakpoints */
+    @include breakpoint('<=small') {
+        .login-form {
+            .row {
+                width: auto;
+
+                > .col-6 {
+                    width: 100%;
+                }
+            }
+        }
+    }

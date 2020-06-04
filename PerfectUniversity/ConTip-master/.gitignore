@@ -1,0 +1,147 @@
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+local_settings.py
+media
+
+# Backup files # 
+*.bak 
+
+# If you are using PyCharm # 
+.idea/*
+.idea/
+*.iws /out/
+
+# Python # 
+*.py[cod] 
+*$py.class 
+
+# Distribution / packaging 
+.Python build/ 
+develop-eggs/ 
+dist/ 
+downloads/ 
+eggs/ 
+.eggs/ 
+lib/ 
+lib64/ 
+parts/ 
+sdist/ 
+var/ 
+wheels/ 
+*.egg-info/ 
+.installed.cfg 
+*.egg 
+*.manifest 
+*.spec 
+
+# Installer logs 
+pip-log.txt 
+pip-delete-this-directory.txt 
+
+# Unit test / coverage reports 
+htmlcov/ 
+.tox/ 
+.coverage 
+.coverage.* 
+.cache 
+.pytest_cache/ 
+nosetests.xml 
+coverage.xml 
+*.cover 
+.hypothesis/ 
+
+# Jupyter Notebook 
+.ipynb_checkpoints 
+
+# pyenv 
+.python-version 
+
+# celery 
+celerybeat-schedule.* 
+
+# SageMath parsed files 
+*.sage.py 
+
+# Environments 
+.env 
+.venv 
+env/ 
+venv/ 
+ENV/ 
+env.bak/ 
+venv.bak/ 
+
+# mkdocs documentation 
+/site 
+
+# mypy 
+.mypy_cache/ 
+
+# Sublime Text # 
+*.tmlanguage.cache 
+*.tmPreferences.cache 
+*.stTheme.cache 
+*.sublime-workspace 
+*.sublime-project 
+
+# sftp configuration file 
+sftp-config.json 
+
+# Package control specific files Package 
+Control.last-run 
+Control.ca-list 
+Control.ca-bundle 
+Control.system-ca-bundle 
+GitHub.sublime-settings 
+
+# Visual Studio Code # 
+.vscode/* 
+!.vscode/settings.json 
+!.vscode/tasks.json 
+!.vscode/launch.json 
+!.vscode/extensions.json 
+.history
+
+project/frontend/.DS_STORE
+project/frontend/node_modules
+project/frontend/scripts/flow/*/.flowconfig
+project/frontend/*~
+project/frontend/*.pyc
+project/frontend/.grunt
+project/frontend/_SpecRunner.html
+project/frontend/__benchmarks__
+project/frontend/build/
+project/frontend/remote-repo/
+project/frontend/coverage/
+project/frontend/.module-cache
+project/frontend/fixtures/dom/public/react-dom.js
+project/frontend/fixtures/dom/public/react.js
+project/frontend/test/the-files-to-test.generated.js
+project/frontend/*.log*
+project/frontend/chrome-user-data
+project/frontend/*.sublime-project
+project/frontend/*.sublime-workspace
+project/frontend/.idea
+project/frontend/*.iml
+project/frontend/.vscode
+project/frontend/*.swp
+project/frontend/*.swo
+project/frontend/packages/react-devtools-core/dist
+project/frontend/packages/react-devtools-extensions/chrome/build
+project/frontend/packages/react-devtools-extensions/chrome/*.crx
+project/frontend/packages/react-devtools-extensions/chrome/*.pem
+project/frontend/packages/react-devtools-extensions/firefox/build
+project/frontend/packages/react-devtools-extensions/firefox/*.xpi
+project/frontend/packages/react-devtools-extensions/firefox/*.pem
+project/frontend/packages/react-devtools-extensions/shared/build
+project/frontend/packages/react-devtools-inline/dist
+project/frontend/packages/react-devtools-shell/dist
+
+project/genres.json
+project/movies.json
+project/users.json
+project/ratings.json
